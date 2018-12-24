@@ -1,0 +1,10 @@
+FROM python:2.7-alpine3.7
+MAINTAINER qhyx:tsinghuanet.com
+
+COPY ./docker/requirements.txt /isf/docker/requirements.txt
+
+RUN apk --no-cache add  openssl-dev libffi-dev libxslt-dev nmap \
+    && apk add --no-cache --virtual .build-deps linux-headers build-base\
+    && pip install -r /isf/docker/requirements.txt \
+    && apk del .build-deps \
+    && rm -rf /root/.cache

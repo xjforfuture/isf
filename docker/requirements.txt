@@ -1,0 +1,7 @@
+requests>=2.9.1
+paramiko>=1.16.0
+lxml
+beautifulsoup4>=4.4.1
+pysnmp>=4.3.2
+python-nmap
+scapy
