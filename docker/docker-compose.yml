@@ -1,0 +1,11 @@
+version: '3'
+services:
+  isf:
+    image: isf:1.1
+    container_name: isf
+    restart: always
+    logging:
+        driver: "json-file"
+        options:
+            max-size: "100m"
+    tty: true

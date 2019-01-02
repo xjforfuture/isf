@@ -1,4 +1,4 @@
-FROM isf-base:1.1
+FROM isf_base:1.1
 MAINTAINER qhyx:tsinghuanet.com
 
 COPY ./ /isf
